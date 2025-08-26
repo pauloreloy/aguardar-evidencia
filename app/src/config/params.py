@@ -12,3 +12,4 @@ SK_CONTROLE                 = "des_etp"
 MAPPER_PATH                 = "src/models/mappers"
 
 BUCKET_PAYLOADS             = "arquivosgerais"
+NUMERO_MAXIMO_TENTATIVAS    = 3
