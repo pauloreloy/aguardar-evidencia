@@ -1,0 +1,9 @@
+boto3
+confluent-kafka==2.1.1
+cryptography
+requests==2.32.4
+fastavro==1.12.0
+attrs
+httpx
+cachetools
+authlib

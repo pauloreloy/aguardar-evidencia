@@ -1,0 +1,12 @@
+{
+  "Payload": {
+    "executionArn": "arn:aws:states:us-east-1:338966484167:execution:validar-retido:a0b6198d-8379-42e9-88e6-04e2ff81ea22",
+    "TaskToken": "AQB0AAAAKgAAAAMAAAAAAAAAAYRfQokWtCz3jsxbQ+veSlwd3kBZnTqq4qiosZaKpFPZTsvw5Fg1to36AdUO/pmLPn0DzPAEQRTtdTLv0A9z/Ke13JuXe8I=Ea4rM3S/l6c2MLnd1yEmcBuEMobneehESDJqUGGd2zw2KOhUAeWnDXaTCBdLWfACu56jLQ3GGmrJcKBNLpg1OmkgZv84X8gRT5GLERVGG7S1DOPahdW3YAOw6VZQbudlzetKyTwzZc+qMVLB66ADbBYuELYhOTF/UDlP7nez1GyDY+b0NUgHCzeA1Icfu7VAY6IJbZrERbk7r62FaZX/VMWrNwwzXxz2vP29qdpEceLjKviKeCKN/jutx4KeV1MZMEmlZ16wM71CxAiPZkzBZXuU2A+YD4njIPtTb0FZ3M/h5o9OSmMK7BpB0lX3yXf0C53TGYL5CE4Mi+dAalwHYruVY4dTXb5WhZhnE6BpBzS2O5Ay45SqueBuB+qVGy2BgGz6CidEwipq0IK7arhv3ni1+54Q5xYKCr86fdpw8oEybkNMKRN2I9mMyHsB/P/hVTlxEwySzDVrI+OXX8InSmJprlqWjlHd5OMMe/K5uIfaTdjux4LLMa0ENUJOXdzzycCxEVKUYoGlIT+3/0YL",
+    "Payload": {
+      "tempoRetencao": 10,
+      "necessarioEvidencia": true,
+      "numero_portabilidade": "123"
+    }
+  },
+  "FunctionName": "arn:aws:lambda:us-east-1:338966484167:function:lbd-aguardar-evidencia:$LATEST"
+}
