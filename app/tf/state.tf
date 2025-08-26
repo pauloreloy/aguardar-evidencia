@@ -68,11 +68,43 @@
           "ErrorEquals": [
             "States.Timeout"
           ],
-          "Next": "Evidência Não Registrada",
+          "Next": "Validar Tentativas",
           "ResultPath": null
         }
       ],
-      "TimeoutSeconds": 10
+      "TimeoutSeconds": 30
+    },
+    "Validar Tentativas": {
+      "Type": "Task",
+      "Resource": "arn:aws:states:::lambda:invoke",
+      "OutputPath": "$.Payload",
+      "Parameters": {
+        "Payload.$": "$",
+        "FunctionName": "arn:aws:lambda:us-east-1:338966484167:function:lbd-validar-retry-evidencia:$LATEST"
+      },
+      "Retry": [
+        {
+          "ErrorEquals": [
+            "Lambda.ServiceException",
+            "Lambda.AWSLambdaException",
+            "Lambda.SdkClientException",
+            "Lambda.TooManyRequestsException"
+          ],
+          "IntervalSeconds": 1,
+          "MaxAttempts": 3,
+          "BackoffRate": 2,
+          "JitterStrategy": "FULL"
+        }
+      ],
+      "Next": "Aguardar Evidência",
+      "Catch": [
+        {
+          "ErrorEquals": [
+            "EvidenciaNaoRegistradaException"
+          ],
+          "Next": "Evidência Não Registrada"
+        }
+      ]
     },
     "Evidência Aceita": {
       "Type": "Pass",
